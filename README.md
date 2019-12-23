@@ -20,3 +20,61 @@ public interface Car {
 }
 ```
 
+2.Component Implementation – Bileşen arayüzün temel uygulamasıdır. Bileşen uygulamamız olarak BasicCar() sınıfını oluşturduk. 
+```java
+
+package com.journaldev.design.decorator;
+
+public class BasicCar implements Car {
+
+	@Override
+	public void assemble() {
+		System.out.print("Basic Car.");
+	}
+
+}
+
+```
+
+3.Decorator - Bileşen değişkeni alt dekoratör sınıfları tarafından erişilebilir olmalıdır, bu nedenle bu değişken korumalı olmalı.
+```java
+
+package com.journaldev.design.decorator;
+
+public class CarDecorator implements Car {
+
+	protected Car car;
+	
+	public CarDecorator(Car c){
+		this.car=c;
+	}
+	
+	@Override
+	public void assemble() {
+		this.car.assemble();
+	}
+
+}
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
