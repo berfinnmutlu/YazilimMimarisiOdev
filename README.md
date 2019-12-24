@@ -79,23 +79,47 @@ Memento tasarım deseni Behavior grubununa ait, bir nesnenin tamamının veya ba
 
 Originator,tamamının veya bazı özelliklerinin kopyasının tutulacağı nesnedir. Memento nesnesini oluşturan ve geri yüklenmesinden sorumludur.Memento ,originator nesnesinin saklanacak özelliklerinin tanımlı olduğu nesne. Caretaker,saklanacak olan memento nesnesinin referansını içinde barındıran nesnedir.
 
+![Image of Class](https://github.com/berfinnmutlu/YazilimMimarisiOdev/blob/master/memento_pattern_uml-diagram.png)
 
+Originator, Memento nesnelerinde durum oluşturur ve saklar. Caretaker nesnesi, Memento'dan nesne durumunu geri yüklemekle sorumludur.
 
+```java
+public class Originator {
+   private String state;
 
+   public void setState(String state){
+      this.state = state;
+   }
 
+   public String getState(){
+      return state;
+   }
 
+   public Memento saveStateToMemento(){
+      return new Memento(state);
+   }
 
+   public void getStateFromMemento(Memento memento){
+      state = memento.getState();
+   }
+}
+```
 
+Caretaker nesnesi, Memento'dan nesne durumunu geri yüklemekle sorumludur.
 
+```java
+import java.util.ArrayList;
+import java.util.List;
 
+public class CareTaker {
+   private List<Memento> mementoList = new ArrayList<Memento>();
 
+   public void add(Memento state){
+      mementoList.add(state);
+   }
 
-
-
-
-
-
-
-
-
-
+   public Memento get(int index){
+      return mementoList.get(index);
+   }
+}
+```
