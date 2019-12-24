@@ -4,14 +4,9 @@
 
 Decorator tasarım deseni , Structural grubuna ait bir tasarım desenidir. Bir nesneye dinamik olarak yeni sorumlulukların eklenmesi ve hatta var olanların çıkartılması amacıyla kullanılır. Bu tasarım deseni , nesneyi kendisinden türeyen alt sınıflar ile genişletmek yerine kullanılabilen alternatif bir yaklaşım olarak düşünülebilir.Bu desenin örnek UML diyagramı şu şekildedir;
 
+![Image of Class](https://github.com/berfinnmutlu/YazilimMimarisiOdev/blob/master/decorator_uml.png)
 
-
-
-
-
-
-
-
+Component, dinamik olarak operasyonlar eklenebilecek yapının uygulayacağı arayüz veya abstract nesnedir. ConcreteComponent ise bu yapıyı uygulayan, operasyon eklenecek gerçek nesnelerdir. Decorator nesnesi Component nesnesini uygular ve içinde Component tipinden bir referans barındırır. ConcreteDecorator nesneleri ekleyeceğimiz operasyonların olacağı nesnelerdir ve Decorator arayüzünü uygular.
 
 ![Image of Class](https://github.com/berfinnmutlu/YazilimMimarisiOdev/blob/master/class.png)
 
