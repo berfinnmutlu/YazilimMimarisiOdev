@@ -9,36 +9,9 @@ Yukarıdaki class diagramının örneğinde, bir araba nesnesine dekorasyon ile 
 
 
 
-1.Component Interface – Uygulanacak yöntemleri tanımlayan arayüz veya soyut sınıf. Bu sınıfımız Car() sınıfı.
+Decorator - Bileşen değişkeni alt dekoratör sınıfları tarafından erişilebilir olmalıdır, bu nedenle bu değişken korumalı olmalı.
+
 ```java
-
-package com.journaldev.design.decorator;
-
-public interface Car {
-
-	public void assemble();
-}
-```
-
-2.Component Implementation – Bileşen arayüzün temel uygulamasıdır. Bileşen uygulamamız olarak BasicCar() sınıfını oluşturduk. 
-```java
-
-package com.journaldev.design.decorator;
-
-public class BasicCar implements Car {
-
-	@Override
-	public void assemble() {
-		System.out.print("Basic Car.");
-	}
-
-}
-
-```
-
-3.Decorator - Bileşen değişkeni alt dekoratör sınıfları tarafından erişilebilir olmalıdır, bu nedenle bu değişken korumalı olmalı.
-```java
-
 package com.journaldev.design.decorator;
 
 public class CarDecorator implements Car {
@@ -53,10 +26,44 @@ public class CarDecorator implements Car {
 	public void assemble() {
 		this.car.assemble();
 	}
-
 }
+```
+
+Concrete Decorators - Temel dekoratör işlevini genişletmek amacıyla LuxuryCar ve SportsCar olmak üzere somut dekoratör sınıflar oluştururuz.
+
+```java
+package com.journaldev.design.decorator;
+
+public class SportsCar extends CarDecorator {
+
+	public SportsCar(Car c) {
+		super(c);
+	}
+
+	@Override
+	public void assemble(){
+		super.assemble();
+		System.out.print(" Adding features of Sports Car.");
+	}
+}
+```
 
 
+```java
+package com.journaldev.design.decorator;
+
+public class LuxuryCar extends CarDecorator {
+
+	public LuxuryCar(Car c) {
+		super(c);
+	}
+	
+	@Override
+	public void assemble(){
+		super.assemble();
+		System.out.print(" Adding features of Luxury Car.");
+	}
+}
 ```
 
 
