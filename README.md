@@ -73,6 +73,9 @@ public class LuxuryCar extends CarDecorator {
 
 ## Memento Design Pattern
 
+Memento tasarım deseni Behavior grubununa ait, bir nesnenin tamamının veya bazı özelliklerinin tutularak sonradan tekrar elde edilmesini yöneten tasarım desenidir.Memento tasarım deseni nesnenin bir halinin kopyasını alıp sonra bu kopyanın tekrar elde edilmesini sağlar. Bu desenin örnek UML diyagramı şu şekildedir;
+
+![Image of Class](https://github.com/berfinnmutlu/YazilimMimarisiOdev/blob/master/memento_uml.png)
 
 
 
