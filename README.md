@@ -79,7 +79,7 @@ Memento tasarım deseni Behavior grubununa ait, bir nesnenin tamamının veya ba
 
 Originator,tamamının veya bazı özelliklerinin kopyasının tutulacağı nesnedir. Memento nesnesini oluşturan ve geri yüklenmesinden sorumludur.Memento ,originator nesnesinin saklanacak özelliklerinin tanımlı olduğu nesne. Caretaker,saklanacak olan memento nesnesinin referansını içinde barındıran nesnedir.
 
-![Image of Class](https://github.com/berfinnmutlu/YazilimMimarisiOdev/blob/master/memento_pattern_uml-diagram.png)
+![Image of Class](https://github.com/berfinnmutlu/YazilimMimarisiOdev/blob/master/memento_pattern_uml_diagram.png)
 
 Originator, Memento nesnelerinde durum oluşturur ve saklar. Caretaker nesnesi, Memento'dan nesne durumunu geri yüklemekle sorumludur.
 
