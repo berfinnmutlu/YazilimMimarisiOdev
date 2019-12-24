@@ -2,7 +2,17 @@
 
 ## Decorator Design Pattern
 
-Decorator tasarım deseni , Structural grubuna ait bir tasarım desenidir. Bir nesneye dinamik olarak yeni sorumlulukların eklenmesi ve hatta var olanların çıkartılması amacıyla kullanılır. Bu tasarım deseni , nesneyi kendisinden türeyen alt sınıflar ile genişletmek yerine kullanılabilen alternatif bir yaklaşım olarak düşünülebilir.
+Decorator tasarım deseni , Structural grubuna ait bir tasarım desenidir. Bir nesneye dinamik olarak yeni sorumlulukların eklenmesi ve hatta var olanların çıkartılması amacıyla kullanılır. Bu tasarım deseni , nesneyi kendisinden türeyen alt sınıflar ile genişletmek yerine kullanılabilen alternatif bir yaklaşım olarak düşünülebilir.Bu desenin örnek UML diyagramı şu şekildedir;
+
+
+
+
+
+
+
+
+
+
 ![Image of Class](https://github.com/berfinnmutlu/YazilimMimarisiOdev/blob/master/class.png)
 
 Yukarıdaki class diagramının örneğinde, bir araba nesnesine dekorasyon ile yeni özellikler kazandırılacaktır.
@@ -65,6 +75,8 @@ public class LuxuryCar extends CarDecorator {
 	}
 }
 ```
+
+## Memento Design Pattern
 
 
 
